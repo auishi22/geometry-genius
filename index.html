@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometry Genius Calculation</title>
-</head>
-<body>
-    
-</body>
+    <!-- tailwind and daisy UI link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="m-4">
+    <!-- header -->
+    <header class="bg-[#1090D81A] rounded-lg">
+      <div class="navbar">
+        <div class="navbar-start py-2 mx-4">
+          <div>
+            <p class="btn btn-ghost text-3xl">Interactive</p>
+            <p class="text-xl ml-4 text-gray-400">Geometry Genius</p>
+          </div>
+        </div>
+        <div class="navbar-end mr-8">
+          <button class="btn bg-[#1090D8] text-white">Normal</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main class="mt-8">
+      <div class="flex flex-col lg:flex-row">
+        <!--shape card container -->
+        <div class="flex-1 grid grid-cols-1 lg:grid-cols-3">
+          <!-- triangle card -->
+          <div class="card w-96 bg-base-100 shadow-xl border-2">
+            <figure>
+              <img class="pt-6" src="images/triangle.png" alt="Triangle" />
+            </figure>
+            <div class="card-body">
+              <div class="text-center">
+                <h2 class="font-bold text-2xl mb-3">Triangle</h2>
+                <p>Area (A) = 0.5 * b * h</p>
+              </div>
+              <div class="text-center my-4">
+                <input
+                  id="triangle-base"
+                  class="w-24 bg-gray-100 text-center rounded-md"
+                  type="text"
+                  placeholder="Base"
+                />
+                <span class="mx-2">cm</span>
+                <input
+                  id="triangle-height"
+                  class="w-24 bg-gray-100 text-center rounded-md"
+                  type="text"
+                  placeholder="Height"
+                />
+                <span class="ml-2">cm</span>
+              </div>
+              <p class="text-xl text-center">Area : <span  id="triangle-area"></span> <span>cm<sup>2</sup></span></p>
+              <div class="card-actions justify-end">
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="triangleCalculate()"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- triangle card -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- triangle card -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--area calculation container -->
+        <div class="w-96 border-2 border-gray-700 rounded-md">
+          <h3 class="text-xl text-center p-4 underline">Area calculation</h3>
+        </div>
+      </div>
+    </main>
+    <script src="js/triangle-calculate.js"></script>
+  </body>
 </html>
